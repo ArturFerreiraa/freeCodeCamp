@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --background: #ffffff;
+  --main-font-color: #4d4e53;
+  --title-color: #000000;
+  --code-background-color: #f7f7f7;
+  --navbar-border: #99a2a2;
+
+  --main-font: 'Open Sans', sans-serif;
+  --code-font: monospace;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  box-sizing: border-box;
+
+  font-family: var(--main-font);
+  color: var(--main-font-color);
+
+  
+}
+
+body {
+  width: 100vw;
+  height: 100dvh;
+  overflow-x: hidden; 
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 23%;
+  height: 100dvh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  border-right: 3px solid var(--navbar-border);
+}
+
+#navbar > header {
+  padding: .5em;
+}
+
+#navbar > header,
+.main-section header {
+  font-size: 1.8em;
+  font-weight: 500;
+  color: var(--title-color);
+}
+
+#navbar li {
+  border-top: 1px solid;
+}
+
+#navbar a {
+  display: inline-block;
+  width: 100%;
+  padding: 1em;
+  text-decoration: none;
+
+  font-size: .9em;
+}
+
+#main-doc {
+  margin-left: 20%;
+  padding: 0 4em 2em;
+}
+
+.main-section header {
+  padding-top: 1em;
+}
+
+.main-section > article {
+  padding-top: 20px;
+  padding-left: 23px;
+}
+
+.main-section > article > p {
+  font-size: .95em;
+  padding-bottom: 15px;
+  line-height: 1.8em;
+}
+
+.main-section code, .main-section pre {
+  font-family: var(--code-font);
+  background-color: var(--code-background-color);
+  border-radius: 10px;
+  width: 95%;
+}
+
+.main-section pre {
+  font-size: 1.3em;
+  padding: 1em;
+}
+
+img {
+  width: 95%;
+}
+
+#big-img {
+  width: 100%;
+}
+
+.main-section ol li {
+  padding-bottom: 1em;
+}
+
+.main-section ul,
+.main-section ol {
+  padding-left: 2.5em;
+  font-size: .9em;
+  line-height: 1.8em;
+}
+
+.main-section dl {
+  font-size: .9em;
+  line-height: 1.8em;
+}
+
+.main-section dt {
+  font-size: 1.2em;
+  font-weight: 700;
+  padding-top: 1em;
+}
+
+.bold {
+  font-weight: 700;
+  color: #000000;
+}
+
+@media (max-width: 1000px) {
+  #navbar {
+    position: static;
+    width: 98%;
+    height: 300px;
+    border: 1px solid;
+  }
+
+  #main-doc {
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
